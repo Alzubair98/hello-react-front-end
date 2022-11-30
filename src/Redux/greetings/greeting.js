@@ -20,11 +20,8 @@ const storeSlice = createSlice({
   name: "Greetings",
   initialState: [],
   reducers: {},
-  extraReducers: {
-    [loadgreet.fulfilled]: (state, action) => {
-      const newState = action.payload.greeting;
-      return newState;
-    },
+  extraReducers: (builder) => {
+    builder.addCase(loadgreet.fulfilled, (state, action) => action.payload);
   },
 });
 

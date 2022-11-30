@@ -9,11 +9,11 @@ export const loadgreet = createAsyncThunk(LOADING, async () => {
     console.log("Error", error);
   });
   const res = response.data;
-  const data = res.map((greet) => ({
-    name: greet.message,
-    id: greet.id,
-  }));
-  return data;
+  // const data = res.map((greet) => ({
+  //   name: greet.message,
+  //   id: greet.id,
+  // }));
+  return res;
 });
 
 const storeSlice = createSlice({

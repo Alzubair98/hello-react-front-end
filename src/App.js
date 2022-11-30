@@ -6,12 +6,6 @@ import { loadgreet } from "./Redux/greetings/greeting";
 import { useDispatch } from "react-redux";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(loadgreet());
-  }, []);
-
   return (
     <Routes>
       <Route path="/" element={<Firstcont />} />

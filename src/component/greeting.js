@@ -1,16 +1,19 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loadgreet } from "../Redux/greetings/greeting";
 
 const Firstcont = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadgreet());
+  }, []);
+
   const greets = useSelector((state) => state.storeSlice);
 
   return (
     <div>
-      {greets.map((greet) => (
-        <div key={greet.id}>
-          <h1>{greet.name}</h1>
-        </div>
-      ))}
+      <h1>{greets.message}</h1>
     </div>
   );
 };

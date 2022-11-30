@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { loadgreet } from "../Redux/greetings/greeting";
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { loadgreet } from '../Redux/greetings/greeting';
 
 const Firstcont = () => {
   const dispatch = useDispatch();

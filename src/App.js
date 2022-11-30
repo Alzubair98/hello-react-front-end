@@ -1,9 +1,6 @@
-import "./App.css";
-import Firstcont from "./component/greeting";
-import React, { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import { loadgreet } from "./Redux/greetings/greeting";
-import { useDispatch } from "react-redux";
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Firstcont from './component/greeting';
 
 function App() {
   return (

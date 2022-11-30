@@ -1,12 +1,12 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const LOADING = "LOADING";
-const url = "http://localhost:3000/api/v1/greetings";
+const LOADING = 'LOADING';
+const url = 'http://localhost:3000/api/v1/greetings';
 
 export const loadgreet = createAsyncThunk(LOADING, async () => {
   const response = await axios.get(url).catch((error) => {
-    console.log("Error", error);
+    console.log('Error', error);
   });
   const res = response.data;
   // const data = res.map((greet) => ({
@@ -17,7 +17,7 @@ export const loadgreet = createAsyncThunk(LOADING, async () => {
 });
 
 const storeSlice = createSlice({
-  name: "Greetings",
+  name: 'Greetings',
   initialState: [],
   reducers: {},
   extraReducers: (builder) => {
